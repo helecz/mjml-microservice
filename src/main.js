@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import {mjml2html} from 'mjml';
+import config from './config';
 
 const app = express();
 
@@ -16,6 +17,6 @@ app.post('/compile', (req, res) => {
   res.send(mjml2html(`${req.body}`));
 });
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!');
+app.listen(config.port, () => {
+  console.log('Server started at port %s', config.port);
 });
