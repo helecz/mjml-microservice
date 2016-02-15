@@ -1,5 +1,6 @@
 {
-  "name": "heleMjml",
+  "name": "hele-mjml-microservice",
+  "license": "MIT",
   "version": "0.0.1",
   "scripts": {
     "eslint": "node_modules/.bin/eslint src/",
