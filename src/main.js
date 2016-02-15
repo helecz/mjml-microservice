@@ -14,7 +14,13 @@ app.get('/', (req, res) => {
 });
 
 app.post('/compile', (req, res) => {
-  res.send(mjml2html(`${req.body}`));
+  try {
+    const responseData = mjml2html(`${req.body}`);
+    res.send(responseData);
+
+  } catch (e) {
+    res.status(422).send('Invalid input');
+  }
 });
 
 app.listen(config.port, () => {
