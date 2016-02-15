@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "eslint": "node_modules/.bin/eslint src/",
+    "test": "node_modules/.bin/eslint src/",
     "start": "node src"
   },
   "dependencies": {
