@@ -13,7 +13,20 @@ Install and run project:
 ## Usage
 
 ```
-curl -X POST http://localhost:8900/compile -d '<mj-body>Hello world!</mj-body>'
+curl -X POST http://localhost:8900/compile -d '\
+<mjml>\
+  <mj-body>\
+    <mj-container>\
+      <mj-section>\
+        <mj-column>\
+          <mj-text>\
+            Hello World!\
+          </mj-text>\
+        </mj-column>\
+      </mj-section>\
+    </mj-container>\
+  </mj-body>\
+</mjml>'
 ```
 
 **Responses**
